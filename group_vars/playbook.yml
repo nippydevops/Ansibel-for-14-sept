@@ -1,0 +1,10 @@
+---
+- name: testing group variables
+  hosts: servers
+  tasks:
+   - name: create db {{dbname}}
+     yum:
+      name: httpd
+      state: present
+     become: yes
+
